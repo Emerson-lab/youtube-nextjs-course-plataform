@@ -1,10 +1,16 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 import { MdMenu, MdOutlineOpenInNew } from 'react-icons/md';
 
 export const Header = () => {
   const currentPath = usePathname();
+  const [title, setTitle] = useState('Trinity');
+
+  useEffect(() => {
+    setTitle(document.title);
+  }, [currentPath]);
 
   return (
     <nav className='flex items-center gap-6 justify-start md:justify-center bg-primary py-2 sm:py-4 px-6'>
@@ -39,7 +45,7 @@ export const Header = () => {
         </li>
       </ul>
 
-      <h1 className='sm:hidden'>Trinity - Página inicial</h1>
+      <h1 className='sm:hidden'>{title}</h1>
     </nav>
   );
 };
