@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default function PageHome() {
   return (
     <main className="bg-background">
-      <Section />
+      <Section title="Veja mais cursos" variant="h-list" />
     </main>
   );
 }
