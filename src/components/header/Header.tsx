@@ -4,18 +4,15 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { MdMenu, MdOutlineOpenInNew } from 'react-icons/md';
 
-
 export const Header = () => {
   const currentPath = usePathname();
   const [drawer, setDrawer] = useState(false);
   const [title, setTitle] = useState('CodarSe');
 
-
   useEffect(() => {
-    setTitle(document.title);
     setDrawer(false);
+    setTitle(document.title);
   }, [currentPath]);
-
 
   return (
     <nav className='flex items-center gap-6 justify-start md:justify-center bg-primary py-2 sm:py-4 px-6'>
