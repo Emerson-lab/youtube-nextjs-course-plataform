@@ -19,8 +19,8 @@ export const Card = (props: CardProps) => {
           {props.title}
         </h4>
 
-        <p className="line-clamp-3">
-          {props.description}
+        <p className="line-clamp-3 sm:line-clamp-4 md:line-clamp-5">
+          {props.description}S
         </p>
       </article>
     </Link>

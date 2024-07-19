@@ -1,4 +1,7 @@
+import { CardProps } from "../card/types";
+
 export interface SectionProps {
   title: string;
-  variant: "grid" | "h-list"
+  items: CardProps[];
+  variant: "grid" | "h-list";
 }
